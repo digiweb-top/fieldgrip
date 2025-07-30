@@ -1,6 +1,8 @@
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next';
 
 export default function Contact() {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -15,7 +17,7 @@ export default function Contact() {
     console.log('Form submitted:', formData)
     // Reset form
     setFormData({ name: '', email: '', phone: '', crop: '', message: '' })
-    alert('Thank you for your inquiry! We will contact you soon.')
+    alert(t('contact.form.successMessage'))
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -28,30 +30,27 @@ export default function Contact() {
   const contactInfo = [
     {
       icon: "📍",
-      title: "Address",
-      details: ["Fieldgrip Private Limited", "Agricultural Solutions Center", "Maharashtra, India"]
+      title: t('contact.info.address.title'),
+      details: [t('contact.info.address.line1'), t('contact.info.address.line2'), t('contact.info.address.line3')]
     },
     {
       icon: "📞",
-      title: "Phone",
+      title: t('contact.info.phone.title'),
       details: ["+91 98765 43210", "+91 87654 32109"]
     },
     {
       icon: "✉️",
-      title: "Email",
+      title: t('contact.info.email.title'),
       details: ["info@fieldgrip.com", "support@fieldgrip.com"]
     },
     {
       icon: "🕒",
-      title: "Working Hours",
-      details: ["Mon - Sat: 9:00 AM - 6:00 PM", "Sunday: Closed"]
+      title: t('contact.info.hours.title'),
+      details: [t('contact.info.hours.weekdays'), t('contact.info.hours.sunday')]
     }
   ]
 
-  const crops = [
-    "Cotton", "Grapes", "Sugarcane", "Banana", "Citrus", "Pomegranate", 
-    "Papaya", "Watermelon", "Vegetables", "Ginger", "Turmeric", "Other"
-  ]
+  const crops = t('contact.crops', { returnObjects: true }) as string[]
 
   return (
     <section id="contact" className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-green-50 to-emerald-50">
@@ -59,21 +58,21 @@ export default function Contact() {
         {/* Section Header */}
         <div className="text-center mb-8 sm:mb-12 lg:mb-16">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 mb-4 sm:mb-6" style={{ fontFamily: 'Bricolage Grotesque, sans-serif' }}>
-            Contact Us
+            {t('contact.title')}
           </h2>
           <p className="text-base sm:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto px-4" style={{ fontFamily: 'Montserrat, sans-serif' }}>
-            Ready to boost your crop yields? Contact us for personalized agricultural solutions
+            {t('contact.subtitle')}
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
           {/* Send Us a Message */}
           <div className="bg-white rounded-2xl shadow-xl p-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6" style={{ fontFamily: 'Bricolage Grotesque, sans-serif' }}>Send Us a Message</h3>
+            <h3 className="text-2xl font-bold text-gray-900 mb-6" style={{ fontFamily: 'Bricolage Grotesque, sans-serif' }}>{t('contact.sendMessage')}</h3>
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2" style={{ fontFamily: 'Montserrat, sans-serif' }}>
-                  Full Name *
+                  {t('contact.form.fullName')} {t('contact.form.required')}
                 </label>
                 <input
                   type="text"
@@ -82,14 +81,14 @@ export default function Contact() {
                   onChange={handleChange}
                   required
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-200"
-                  placeholder="Enter your name"
+                  placeholder={t('contact.form.placeholders.name')}
                   style={{ fontFamily: 'Montserrat, sans-serif' }}
                 />
               </div>
               
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2" style={{ fontFamily: 'Montserrat, sans-serif' }}>
-                  Email Address *
+                  {t('contact.form.email')} {t('contact.form.required')}
                 </label>
                 <input
                   type="email"
@@ -98,14 +97,14 @@ export default function Contact() {
                   onChange={handleChange}
                   required
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-200"
-                  placeholder="Enter your email"
+                  placeholder={t('contact.form.placeholders.email')}
                   style={{ fontFamily: 'Montserrat, sans-serif' }}
                 />
               </div>
 
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2" style={{ fontFamily: 'Montserrat, sans-serif' }}>
-                  Phone Number *
+                  {t('contact.form.phone')} {t('contact.form.required')}
                 </label>
                 <input
                   type="tel"
@@ -114,14 +113,14 @@ export default function Contact() {
                   onChange={handleChange}
                   required
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-200"
-                  placeholder="Enter your phone"
+                  placeholder={t('contact.form.placeholders.phone')}
                   style={{ fontFamily: 'Montserrat, sans-serif' }}
                 />
               </div>
 
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2" style={{ fontFamily: 'Montserrat, sans-serif' }}>
-                  Primary Crop
+                  {t('contact.form.primaryCrop')}
                 </label>
                 <select
                   name="crop"
@@ -130,7 +129,7 @@ export default function Contact() {
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-200"
                   style={{ fontFamily: 'Montserrat, sans-serif' }}
                 >
-                  <option value="">Select your crop</option>
+                  <option value="">{t('contact.form.selectCrop')}</option>
                   {crops.map((crop) => (
                     <option key={crop} value={crop}>{crop}</option>
                   ))}
@@ -139,7 +138,7 @@ export default function Contact() {
 
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2" style={{ fontFamily: 'Montserrat, sans-serif' }}>
-                  Message
+                  {t('contact.form.message')}
                 </label>
                 <textarea
                   name="message"
@@ -147,7 +146,7 @@ export default function Contact() {
                   onChange={handleChange}
                   rows={4}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-200"
-                  placeholder="Tell us about your requirements..."
+                  placeholder={t('contact.form.messagePlaceholder')}
                   style={{ fontFamily: 'Montserrat, sans-serif' }}
                 ></textarea>
               </div>
@@ -157,14 +156,14 @@ export default function Contact() {
                 className="w-full bg-green-600 text-white py-3 rounded-md font-semibold hover:bg-green-700 transition-colors duration-200"
                 style={{ fontFamily: 'Montserrat, sans-serif' }}
               >
-                Send Message
+                {t('contact.form.sendButton')}
               </button>
             </form>
           </div>
 
           {/* Contact Information */}
           <div className="bg-white rounded-2xl shadow-xl p-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6" style={{ fontFamily: 'Bricolage Grotesque, sans-serif' }}>Contact Information</h3>
+            <h3 className="text-2xl font-bold text-gray-900 mb-6" style={{ fontFamily: 'Bricolage Grotesque, sans-serif' }}>{t('contact.contactInfo')}</h3>
             <div className="space-y-6">
               {contactInfo.map((info, index) => (
                 <div key={index} className="flex items-start">
@@ -183,10 +182,10 @@ export default function Contact() {
           {/* Connect on WhatsApp */}
           <div className="bg-gradient-to-br from-green-600 to-emerald-600 rounded-2xl shadow-xl p-8 text-white text-center">
             <div className="text-4xl mb-4">💬</div>
-            <h3 className="text-2xl font-bold mb-4" style={{ fontFamily: 'Bricolage Grotesque, sans-serif' }}>Connect on WhatsApp</h3>
-            <p className="mb-6" style={{ fontFamily: 'Montserrat, sans-serif' }}>Get instant answers to your agricultural questions</p>
+            <h3 className="text-2xl font-bold mb-4" style={{ fontFamily: 'Bricolage Grotesque, sans-serif' }}>{t('contact.whatsapp.title')}</h3>
+            <p className="mb-6" style={{ fontFamily: 'Montserrat, sans-serif' }}>{t('contact.whatsapp.subtitle')}</p>
             <button className="bg-white text-green-600 px-8 py-3 rounded-md font-semibold hover:bg-gray-100 transition-colors duration-200" style={{ fontFamily: 'Montserrat, sans-serif' }}>
-              Chat on WhatsApp
+              {t('contact.whatsapp.button')}
             </button>
           </div>
         </div>

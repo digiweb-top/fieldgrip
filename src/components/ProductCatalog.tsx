@@ -1,91 +1,70 @@
+import { useTranslation } from 'react-i18next';
+
 export default function ProductCatalog() {
+  const { t } = useTranslation();
+  
   const allProducts = [
     {
-      name: "Vermigro",
-      category: "Soil & Root Enhancer",
-      description:
-        "Increases the number of useful microbes in soil, improves yield, and enhances plant health",
-      benefits: [
-        "Enhanced soil microbes",
-        "Improved yield",
-        "Better plant health",
-      ],
+      name: t('products.items.vermigro.name'),
+      category: t('products.categories.soilRootEnhancer'),
+      description: t('products.items.vermigro.description'),
+      benefits: t('products.items.vermigro.benefits', { returnObjects: true }) as string[],
       image: "/api/placeholder/300/200",
     },
     {
-      name: "Jumbogrip",
-      category: "Soil & Root Enhancer",
-      description:
-        "Significantly increases fruit size and weight, enhances quality for various crops",
-      benefits: ["Larger fruits", "Better quality", "Higher weight"],
+      name: t('products.items.jumbogrip.name'),
+      category: t('products.categories.soilRootEnhancer'),
+      description: t('products.items.jumbogrip.description'),
+      benefits: t('products.items.jumbogrip.benefits', { returnObjects: true }) as string[],
       image: "/api/placeholder/300/200",
     },
     {
-      name: "Reward-N",
-      category: "Fungal Control",
-      description:
-        "Controls rot and diseases in ginger and turmeric; recommended for drip or drenching",
-      benefits: ["Disease control", "Rot prevention", "Crop protection"],
+      name: t('products.items.rewardN.name'),
+      category: t('products.categories.fungalControl'),
+      description: t('products.items.rewardN.description'),
+      benefits: t('products.items.rewardN.benefits', { returnObjects: true }) as string[],
       image: "/api/placeholder/300/200",
     },
     {
-      name: "Orthogrip 18",
-      category: "Fungal Control",
-      description:
-        "Reduces abiotic stress from temperature, excess rain, or disease",
-      benefits: [
-        "Stress reduction",
-        "Weather protection",
-        "Disease resistance",
-      ],
+      name: t('products.items.orthogrip18.name'),
+      category: t('products.categories.fungalControl'),
+      description: t('products.items.orthogrip18.description'),
+      benefits: t('products.items.orthogrip18.benefits', { returnObjects: true }) as string[],
       image: "/api/placeholder/300/200",
     },
     {
-      name: "Technovit",
-      category: "Stress/Weather Protection",
-      description:
-        "Helps plants withstand environmental changes and relieves stress. Increases branches and improves plant health",
-      benefits: ["Stress relief", "More branches", "Environmental resistance"],
+      name: t('products.items.technovit.name'),
+      category: t('products.categories.stressWeatherProtection'),
+      description: t('products.items.technovit.description'),
+      benefits: t('products.items.technovit.benefits', { returnObjects: true }) as string[],
       image: "/api/placeholder/300/200",
     },
     {
-      name: "Microgrip",
-      category: "Micronutrient Supplement",
-      description:
-        "Contains all essential minor nutrients as per government standard; increases yield by 30–40%",
-      benefits: [
-        "Essential nutrients",
-        "30-40% yield increase",
-        "Government standard",
-      ],
+      name: t('products.items.microgrip.name'),
+      category: t('products.categories.micronutrientSupplement'),
+      description: t('products.items.microgrip.description'),
+      benefits: t('products.items.microgrip.benefits', { returnObjects: true }) as string[],
       image: "/api/placeholder/300/200",
     },
     {
-      name: "Setter DF",
-      category: "Fruit Growth & Quality Enhancer",
-      description:
-        "Specialized formulation for enhanced fruit setting and development",
-      benefits: [
-        "Better fruit setting",
-        "Enhanced development",
-        "Quality improvement",
-      ],
+      name: t('products.items.setterDF.name'),
+      category: t('products.categories.fruitGrowthQualityEnhancer'),
+      description: t('products.items.setterDF.description'),
+      benefits: t('products.items.setterDF.benefits', { returnObjects: true }) as string[],
       image: "/api/placeholder/300/200",
     },
     {
-      name: "Gold Hut-98",
-      category: "Flower/Fruit Development",
-      description:
-        "Increases the number of white roots, improves plant quality and production",
-      benefits: ["More white roots", "Better quality", "Higher production"],
+      name: t('products.items.goldHut98.name'),
+      category: t('products.categories.flowerFruitDevelopment'),
+      description: t('products.items.goldHut98.description'),
+      benefits: t('products.items.goldHut98.benefits', { returnObjects: true }) as string[],
       image: "/api/placeholder/300/200",
     },
     {
-      name: "Flower Start",
-      category: "Flower/Fruit Development",
-      description:
-        "Flower induction booster for enhanced flowering and fruit set",
-      benefits: ["Flower induction", "Enhanced flowering", "Better fruit set"],
+      name: t('products.items.flowerStart.name'),
+      category: t('products.categories.flowerFruitDevelopment'),
+      description: t('products.items.flowerStart.description'),
+      benefits: t('products.items.flowerStart.benefits', { returnObjects: true }) as string[],
       image: "/api/placeholder/300/200",
     },
   ];
@@ -102,14 +81,13 @@ export default function ProductCatalog() {
             className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 mb-4 sm:mb-6"
             style={{ fontFamily: "Bricolage Grotesque, sans-serif" }}
           >
-            Our Products
+            {t('products.title')}
           </h2>
           <p
             className="text-base sm:text-lg lg:text-xl text-gray-600 max-w-5xl mx-auto px-4"
             style={{ fontFamily: "Montserrat, sans-serif" }}
           >
-            Complete range of specialized agricultural products designed to
-            maximize your crop potential
+            {t('products.subtitle')}
           </p>
         </div>
 
@@ -126,7 +104,7 @@ export default function ProductCatalog() {
                   <div className="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-2">
                     <span className="text-2xl text-green-600">📦</span>
                   </div>
-                  <p className="text-gray-500 text-sm">Product Image</p>
+                  <p className="text-gray-500 text-sm">{t('products.productImage')}</p>
                 </div>
               </div>
 
@@ -151,7 +129,7 @@ export default function ProductCatalog() {
 
                 <div className="space-y-1 sm:space-y-2">
                   <h5 className="font-semibold text-green-700 text-xs sm:text-sm">
-                    Key Benefits:
+                    {t('products.keyBenefits')}
                   </h5>
                   <ul className="space-y-1">
                     {product.benefits.map((benefit, idx) => (
@@ -168,10 +146,10 @@ export default function ProductCatalog() {
 
                 <div className="flex gap-1 sm:gap-2 mt-3 sm:mt-4">
                   <button className="flex-1 bg-green-600 text-white py-1.5 sm:py-2 px-2 sm:px-3 rounded-md hover:bg-green-700 transition-colors duration-200 text-xs sm:text-sm font-medium">
-                    Learn More
+                    {t('products.learnMore')}
                   </button>
                   <button className="flex-1 border border-green-600 text-green-600 hover:bg-green-600 hover:text-white py-1.5 sm:py-2 px-2 sm:px-3 rounded-md transition-colors duration-200 text-xs sm:text-sm font-medium">
-                    Get Quote
+                    {t('products.getQuote')}
                   </button>
                 </div>
               </div>

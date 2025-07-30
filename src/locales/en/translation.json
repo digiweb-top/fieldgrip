@@ -1,0 +1,156 @@
+{
+  "header": {
+    "brand": "Fieldgrip",
+    "contactUs": "Contact Us"
+  },
+  "categories": {
+    "nutrients": "Nutrients",
+    "fungicides": "Fungicides",
+    "insecticides": "Insecticides",
+    "seeds": "Seeds",
+    "weedicides": "Weedicides",
+    "tissueCulture": "Tissue Culture"
+  },
+  "products": {
+    "title": "Our Products",
+    "subtitle": "Complete range of specialized agricultural products designed to maximize your crop potential",
+    "keyBenefits": "Key Benefits:",
+    "learnMore": "Learn More",
+    "getQuote": "Get Quote",
+    "productImage": "Product Image",
+    "categories": {
+      "soilRootEnhancer": "Soil & Root Enhancer",
+      "fungalControl": "Fungal Control",
+      "stressWeatherProtection": "Stress/Weather Protection",
+      "micronutrientSupplement": "Micronutrient Supplement",
+      "fruitGrowthQualityEnhancer": "Fruit Growth & Quality Enhancer",
+      "flowerFruitDevelopment": "Flower/Fruit Development"
+    },
+    "items": {
+      "vermigro": {
+        "name": "Vermigro",
+        "description": "Increases the number of useful microbes in soil, improves yield, and enhances plant health",
+        "benefits": ["Enhanced soil microbes", "Improved yield", "Better plant health"]
+      },
+      "jumbogrip": {
+        "name": "Jumbogrip",
+        "description": "Significantly increases fruit size and weight, enhances quality for various crops",
+        "benefits": ["Larger fruits", "Better quality", "Higher weight"]
+      },
+      "rewardN": {
+        "name": "Reward-N",
+        "description": "Controls rot and diseases in ginger and turmeric; recommended for drip or drenching",
+        "benefits": ["Disease control", "Rot prevention", "Crop protection"]
+      },
+      "orthogrip18": {
+        "name": "Orthogrip 18",
+        "description": "Reduces abiotic stress from temperature, excess rain, or disease",
+        "benefits": ["Stress reduction", "Weather protection", "Disease resistance"]
+      },
+      "technovit": {
+        "name": "Technovit",
+        "description": "Helps plants withstand environmental changes and relieves stress. Increases branches and improves plant health",
+        "benefits": ["Stress relief", "More branches", "Environmental resistance"]
+      },
+      "microgrip": {
+        "name": "Microgrip",
+        "description": "Contains all essential minor nutrients as per government standard; increases yield by 30–40%",
+        "benefits": ["Essential nutrients", "30-40% yield increase", "Government standard"]
+      },
+      "setterDF": {
+        "name": "Setter DF",
+        "description": "Specialized formulation for enhanced fruit setting and development",
+        "benefits": ["Better fruit setting", "Enhanced development", "Quality improvement"]
+      },
+      "goldHut98": {
+        "name": "Gold Hut-98",
+        "description": "Increases the number of white roots, improves plant quality and production",
+        "benefits": ["More white roots", "Better quality", "Higher production"]
+      },
+      "flowerStart": {
+        "name": "Flower Start",
+        "description": "Flower induction booster for enhanced flowering and fruit set",
+        "benefits": ["Flower induction", "Enhanced flowering", "Better fruit set"]
+      }
+    }
+  },
+  "about": {
+    "title": "About Fieldgrip Private Limited",
+    "subtitle": "Empowering farmers with innovative agricultural solutions since our inception",
+    "ourStory": "Our Story",
+    "storyContent": {
+      "paragraph1": "Fieldgrip Private Limited was founded with a vision to revolutionize agriculture through innovative, sustainable solutions. We understand the challenges faced by modern farmers and are committed to providing products that not only increase yields but also protect the environment.",
+      "paragraph2": "Our comprehensive range of 9 specialized products covers every aspect of crop nutrition, from soil conditioning to harvest optimization. Each product is carefully formulated using the latest agricultural science and tested extensively to ensure maximum effectiveness.",
+      "paragraph3": "We believe in building partnerships with farmers, providing not just products but complete agricultural solutions that help them achieve sustainable success."
+    },
+    "mission": {
+      "title": "Our Mission",
+      "content": "To empower farmers with innovative, sustainable agricultural solutions that maximize crop productivity while preserving environmental health for future generations."
+    },
+    "vision": {
+      "title": "Our Vision",
+      "content": "To be the leading provider of agricultural solutions in India, recognized for our commitment to innovation, quality, and farmer success."
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Ready to boost your crop yields? Contact us for personalized agricultural solutions",
+    "sendMessage": "Send Us a Message",
+    "contactInfo": "Contact Information",
+    "whatsapp": {
+      "title": "Connect on WhatsApp",
+      "subtitle": "Get instant answers to your agricultural questions",
+      "button": "Chat on WhatsApp"
+    },
+    "form": {
+      "fullName": "Full Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "primaryCrop": "Primary Crop",
+      "selectCrop": "Select your crop",
+      "message": "Message",
+      "messagePlaceholder": "Tell us about your requirements...",
+      "sendButton": "Send Message",
+      "required": "*",
+      "placeholders": {
+        "name": "Enter your name",
+        "email": "Enter your email",
+        "phone": "Enter your phone"
+      },
+      "successMessage": "Thank you for your inquiry! We will contact you soon."
+    },
+    "info": {
+      "address": {
+        "title": "Address",
+        "line1": "Fieldgrip Private Limited",
+        "line2": "Agricultural Solutions Center",
+        "line3": "Maharashtra, India"
+      },
+      "phone": {
+        "title": "Phone"
+      },
+      "email": {
+        "title": "Email"
+      },
+      "hours": {
+        "title": "Working Hours",
+        "weekdays": "Mon - Sat: 9:00 AM - 6:00 PM",
+        "sunday": "Sunday: Closed"
+      }
+    },
+    "crops": ["Cotton", "Grapes", "Sugarcane", "Banana", "Citrus", "Pomegranate", "Papaya", "Watermelon", "Vegetables", "Ginger", "Turmeric", "Other"]
+  },
+  "footer": {
+    "companyName": "Fieldgrip",
+    "companyType": "Private Limited",
+    "description": "Empowering farmers with innovative agricultural solutions for sustainable growth and maximum productivity.",
+    "copyright": "© 2024 Fieldgrip Private Limited. All rights reserved.",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service"
+  },
+  "language": {
+    "english": "English",
+    "hindi": "हिंदी",
+    "marathi": "मराठी"
+  }
+}

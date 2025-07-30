@@ -1,4 +1,8 @@
+import { useTranslation } from 'react-i18next';
+
 export default function Footer() {
+  const { t } = useTranslation();
+  
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
@@ -10,12 +14,12 @@ export default function Footer() {
                 <span className="text-white font-bold text-lg">F</span>
               </div>
               <div>
-                <h3 className="text-xl font-bold" style={{ fontFamily: 'Bricolage Grotesque, sans-serif' }}>Fieldgrip</h3>
-                <p className="text-green-400 text-sm" style={{ fontFamily: 'Montserrat, sans-serif' }}>Private Limited</p>
+                <h3 className="text-xl font-bold" style={{ fontFamily: 'Bricolage Grotesque, sans-serif' }}>{t('footer.companyName')}</h3>
+                <p className="text-green-400 text-sm" style={{ fontFamily: 'Montserrat, sans-serif' }}>{t('footer.companyType')}</p>
               </div>
             </div>
             <p className="text-gray-300 text-sm leading-relaxed" style={{ fontFamily: 'Montserrat, sans-serif' }}>
-              Empowering farmers with innovative agricultural solutions for sustainable growth and maximum productivity.
+              {t('footer.description')}
             </p>
           </div>
 
@@ -56,14 +60,14 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-gray-800 mt-6 sm:mt-8 pt-4 sm:pt-6 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm" style={{ fontFamily: 'Montserrat, sans-serif' }}>
-            © 2024 Fieldgrip Private Limited. All rights reserved.
+            {t('footer.copyright')}
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <a href="#" className="text-gray-400 hover:text-green-400 text-sm transition-colors duration-200" style={{ fontFamily: 'Montserrat, sans-serif' }}>
-              Privacy Policy
+              {t('footer.privacyPolicy')}
             </a>
             <a href="#" className="text-gray-400 hover:text-green-400 text-sm transition-colors duration-200" style={{ fontFamily: 'Montserrat, sans-serif' }}>
-              Terms of Service
+              {t('footer.termsOfService')}
             </a>
           </div>
         </div>

@@ -1,17 +1,19 @@
 import { useState, useRef } from 'react'
+import { useTranslation } from 'react-i18next';
 
 export default function ProductCategories() {
+  const { t } = useTranslation();
   const [showLeftArrow, setShowLeftArrow] = useState(false)
   const [showRightArrow, setShowRightArrow] = useState(true)
   const scrollContainerRef = useRef<HTMLDivElement>(null)
 
   const categories = [
-    { name: "Nutrients", placeholder: "🌱" },
-    { name: "Fungicides", placeholder: "🍄" },
-    { name: "Insecticides", placeholder: "🐛" },
-    { name: "Seeds", placeholder: "🌾" },
-    { name: "Weedicides", placeholder: "🌿" },
-    { name: "Tissue Culture", placeholder: "🧪" },
+    { name: t('categories.nutrients'), placeholder: "🌱" },
+    { name: t('categories.fungicides'), placeholder: "🍄" },
+    { name: t('categories.insecticides'), placeholder: "🐛" },
+    { name: t('categories.seeds'), placeholder: "🌾" },
+    { name: t('categories.weedicides'), placeholder: "🌿" },
+    { name: t('categories.tissueCulture'), placeholder: "🧪" },
   ];
 
   const handleScroll = () => {
