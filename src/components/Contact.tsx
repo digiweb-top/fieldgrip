@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next';
+import { getContactInfo } from '../data/contactInfo';
 
 export default function Contact() {
   const { t } = useTranslation();
@@ -27,28 +28,7 @@ export default function Contact() {
     })
   }
 
-  const contactInfo = [
-    {
-      icon: "📍",
-      title: t('contact.info.address.title'),
-      details: [t('contact.info.address.line1'), t('contact.info.address.line2'), t('contact.info.address.line3')]
-    },
-    {
-      icon: "📞",
-      title: t('contact.info.phone.title'),
-      details: ["+91 98765 43210", "+91 87654 32109"]
-    },
-    {
-      icon: "✉️",
-      title: t('contact.info.email.title'),
-      details: ["info@fieldgrip.com", "support@fieldgrip.com"]
-    },
-    {
-      icon: "🕒",
-      title: t('contact.info.hours.title'),
-      details: [t('contact.info.hours.weekdays'), t('contact.info.hours.sunday')]
-    }
-  ]
+  const contactInfo = getContactInfo(t);
 
   const crops = t('contact.crops', { returnObjects: true }) as string[]
 
@@ -71,10 +51,11 @@ export default function Contact() {
             <h3 className="text-2xl font-bold text-gray-900 mb-6" style={{ fontFamily: 'Bricolage Grotesque, sans-serif' }}>{t('contact.sendMessage')}</h3>
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2" style={{ fontFamily: 'Montserrat, sans-serif' }}>
+                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2" style={{ fontFamily: 'Montserrat, sans-serif' }}>
                   {t('contact.form.fullName')} {t('contact.form.required')}
                 </label>
                 <input
+                  id="name"
                   type="text"
                   name="name"
                   value={formData.name}
@@ -87,10 +68,11 @@ export default function Contact() {
               </div>
               
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2" style={{ fontFamily: 'Montserrat, sans-serif' }}>
+                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2" style={{ fontFamily: 'Montserrat, sans-serif' }}>
                   {t('contact.form.email')} {t('contact.form.required')}
                 </label>
                 <input
+                  id="email"
                   type="email"
                   name="email"
                   value={formData.email}
@@ -103,10 +85,11 @@ export default function Contact() {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2" style={{ fontFamily: 'Montserrat, sans-serif' }}>
+                <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2" style={{ fontFamily: 'Montserrat, sans-serif' }}>
                   {t('contact.form.phone')} {t('contact.form.required')}
                 </label>
                 <input
+                  id="phone"
                   type="tel"
                   name="phone"
                   value={formData.phone}
@@ -119,10 +102,11 @@ export default function Contact() {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2" style={{ fontFamily: 'Montserrat, sans-serif' }}>
+                <label htmlFor="crop" className="block text-sm font-medium text-gray-700 mb-2" style={{ fontFamily: 'Montserrat, sans-serif' }}>
                   {t('contact.form.primaryCrop')}
                 </label>
                 <select
+                  id="crop"
                   name="crop"
                   value={formData.crop}
                   onChange={handleChange}
@@ -137,10 +121,11 @@ export default function Contact() {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2" style={{ fontFamily: 'Montserrat, sans-serif' }}>
+                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2" style={{ fontFamily: 'Montserrat, sans-serif' }}>
                   {t('contact.form.message')}
                 </label>
                 <textarea
+                  id="message"
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
@@ -184,9 +169,15 @@ export default function Contact() {
             <div className="text-4xl mb-4">💬</div>
             <h3 className="text-2xl font-bold mb-4" style={{ fontFamily: 'Bricolage Grotesque, sans-serif' }}>{t('contact.whatsapp.title')}</h3>
             <p className="mb-6" style={{ fontFamily: 'Montserrat, sans-serif' }}>{t('contact.whatsapp.subtitle')}</p>
-            <button className="bg-white text-green-600 px-8 py-3 rounded-md font-semibold hover:bg-gray-100 transition-colors duration-200" style={{ fontFamily: 'Montserrat, sans-serif' }}>
+            <a 
+              href="https://wa.me/919876543210" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-block bg-white text-green-600 px-8 py-3 rounded-md font-semibold hover:bg-gray-100 transition-colors duration-200" 
+              style={{ fontFamily: 'Montserrat, sans-serif' }}
+            >
               {t('contact.whatsapp.button')}
-            </button>
+            </a>
           </div>
         </div>
       </div>
