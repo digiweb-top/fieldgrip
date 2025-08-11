@@ -20,7 +20,10 @@ export default function Header() {
 
           {/* Contact Us Button and Language Switcher */}
           <div className="flex items-center space-x-4">
-            <button className="bg-green-500 text-white px-3 py-2 sm:px-6 sm:py-2 text-sm sm:text-base rounded-md hover:bg-green-700 transition-colors duration-200 font-medium">
+            <button 
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+              className="bg-green-500 text-white px-3 py-2 sm:px-6 sm:py-2 text-sm sm:text-base rounded-md hover:bg-green-700 transition-colors duration-200 font-medium"
+            >
               {t('header.contactUs')}
             </button>
             <LanguageSwitcher />

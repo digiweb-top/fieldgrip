@@ -25,53 +25,6 @@
       "micronutrientSupplement": "Micronutrient Supplement",
       "fruitGrowthQualityEnhancer": "Fruit Growth & Quality Enhancer",
       "flowerFruitDevelopment": "Flower/Fruit Development"
-    },
-    "items": {
-      "vermigro": {
-        "name": "Vermigro",
-        "description": "Increases the number of useful microbes in soil, improves yield, and enhances plant health",
-        "benefits": ["Enhanced soil microbes", "Improved yield", "Better plant health"]
-      },
-      "jumbogrip": {
-        "name": "Jumbogrip",
-        "description": "Significantly increases fruit size and weight, enhances quality for various crops",
-        "benefits": ["Larger fruits", "Better quality", "Higher weight"]
-      },
-      "rewardN": {
-        "name": "Reward-N",
-        "description": "Controls rot and diseases in ginger and turmeric; recommended for drip or drenching",
-        "benefits": ["Disease control", "Rot prevention", "Crop protection"]
-      },
-      "orthogrip18": {
-        "name": "Orthogrip 18",
-        "description": "Reduces abiotic stress from temperature, excess rain, or disease",
-        "benefits": ["Stress reduction", "Weather protection", "Disease resistance"]
-      },
-      "technovit": {
-        "name": "Technovit",
-        "description": "Helps plants withstand environmental changes and relieves stress. Increases branches and improves plant health",
-        "benefits": ["Stress relief", "More branches", "Environmental resistance"]
-      },
-      "microgrip": {
-        "name": "Microgrip",
-        "description": "Contains all essential minor nutrients as per government standard; increases yield by 30–40%",
-        "benefits": ["Essential nutrients", "30-40% yield increase", "Government standard"]
-      },
-      "setterDF": {
-        "name": "Setter DF",
-        "description": "Specialized formulation for enhanced fruit setting and development",
-        "benefits": ["Better fruit setting", "Enhanced development", "Quality improvement"]
-      },
-      "goldHut98": {
-        "name": "Gold Hut-98",
-        "description": "Increases the number of white roots, improves plant quality and production",
-        "benefits": ["More white roots", "Better quality", "Higher production"]
-      },
-      "flowerStart": {
-        "name": "Flower Start",
-        "description": "Flower induction booster for enhanced flowering and fruit set",
-        "benefits": ["Flower induction", "Enhanced flowering", "Better fruit set"]
-      }
     }
   },
   "about": {
